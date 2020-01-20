@@ -76,7 +76,7 @@ function draw() {
     score = score + Math.round(getFrameRate()/60);
      
   if(keyDown("space") && trex.y  >= 159) {
-    jumpSound.play();
+    jump.play();
     trex.velocityY = -10;
   }
   
@@ -91,11 +91,11 @@ function draw() {
   spawnObstacles();
   
      if(score > 0 && score%100===0){
-        checkPointSound.play();
+        checkPoint.play();
     }
      
      if(obstaclesGroup.isTouching(trex)){
-     dieSound.play();
+     die.play();
      gameState = END;
 }
 }
